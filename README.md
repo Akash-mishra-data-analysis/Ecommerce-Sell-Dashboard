@@ -29,15 +29,12 @@ dax
 
 Total_Sales_Amount = SUM(Sales_Data[Amount])
 
-कोड का इस्तेमाल सावधानी से करें.
-
 #### 2. Total Profit Calculated
 
 dax
 
 Total_Profit = SUM(Sales_Data[Profit])
 
-कोड का इस्तेमाल सावधानी से करें.
 
 #### 3. Average Order Value (AOV)
 
@@ -45,15 +42,11 @@ dax
 
 Average_Order_Value = DIVIDE([Total_Sales_Amount], SUM(Sales_Data[Quantity]), 0)
 
-कोड का इस्तेमाल सावधानी से करें.
-
 #### 4. Dynamic Quarter Category (Power Query / M-Code representation)
 
 powerquery
 
 = Table.AddColumn(#"Changed Type", "Quarter", each if [Month] = "January" or [Month] = "February" or [Month] = "March" then "Qtr 1" else "Other")
-
-कोड का इस्तेमाल सावधानी से करें.
 
 #### 🚀 How to Run the Project Locally
 
@@ -65,7 +58,6 @@ bash
 
 git clone https://github.com/your-username/ecommerce-sales-dashboard.git
 
-कोड का इस्तेमाल सावधानी से करें.
 2. **Prerequisites:** 
 
   * Install [Microsoft Power BI Desktop](https://powerbi.microsoft.com/) (Free).
