@@ -48,27 +48,5 @@ powerquery
 
 = Table.AddColumn(#"Changed Type", "Quarter", each if [Month] = "January" or [Month] = "February" or [Month] = "March" then "Qtr 1" else "Other")
 
-#### 🚀 How to Run the Project Locally
-
-To view and interact with this dashboard on your system, follow these steps: 
-
-1. **Clone the Repository:** 
-
-bash
-
-git clone https://github.com/your-username/ecommerce-sales-dashboard.git
-
-2. **Prerequisites:** 
-
-  * Install [Microsoft Power BI Desktop](https://powerbi.microsoft.com/) (Free).
-3. **Open the Project:** 
-
-  * Navigate to the cloned folder.
-  * Double-click on the Ecommerce_Dashboard.pbix file to open it in Power BI.
-4. **Interact with Filters:** 
-
-  * Use the **Quarter Slicers** (Qtr 1, Qtr 2, etc.) at the top right to filter all visuals dynamically.
-
-#### 📸 Dashboard Preview
 
  
