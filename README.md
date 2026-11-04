@@ -1,0 +1,82 @@
+#### 🛒 Ecommerce Sales Dashboard
+
+An interactive and dynamic **Ecommerce Sales Dashboard** designed to track, analyze, and visualize key sales performance metrics. This project helps businesses extract actionable insights regarding sales revenue, profitability, customer behavior, and regional trends. 
+
+#### 📊 Project Overview & Key Insights
+
+This dashboard provides a comprehensive breakdown of e-commerce performance: 
+
+* **Key Performance Indicators (KPIs):** Tracks Total Quantity (2K), Sum of Amount (161K), Sum of Profit (26K), and Sum of AOV (44K).
+* **Geographical Performance:** Top-performing states filtered by total sales amount (Maharashtra, Madhya Pradesh, Delhi, Uttar Pradesh).
+* **Category Breakdown:** Share of total quantity sold divided into Clothing (63%), Electronics (19%), and Furniture (18%).
+* **Monthly Trends:** Profit analysis across consecutive months (January, February, March).
+* **Customer Preferences:** Analysis of top-buying customers and preferred payment methods (COD, UPI, Debit Card, Credit Card).
+
+#### 🛠️ Tech Stack & Tools Used
+
+* **BI Tool:** Microsoft Power BI Desktop
+* **Data Source:** E-commerce Sales Dataset (CSV/Excel format)
+* **Data Transformation:** Power Query Editor
+* **Modeling:** DAX (Data Analysis Expressions)
+
+#### 💻 Technical Implementation & DAX Code
+
+To create dynamic KPIs and calculated columns, the following **DAX (Data Analysis Expressions)** formulas were implemented in this project: 
+
+#### 1. Total Sales Amount
+
+dax
+
+Total_Sales_Amount = SUM(Sales_Data[Amount])
+
+कोड का इस्तेमाल सावधानी से करें.
+
+#### 2. Total Profit Calculated
+
+dax
+
+Total_Profit = SUM(Sales_Data[Profit])
+
+कोड का इस्तेमाल सावधानी से करें.
+
+#### 3. Average Order Value (AOV)
+
+dax
+
+Average_Order_Value = DIVIDE([Total_Sales_Amount], SUM(Sales_Data[Quantity]), 0)
+
+कोड का इस्तेमाल सावधानी से करें.
+
+#### 4. Dynamic Quarter Category (Power Query / M-Code representation)
+
+powerquery
+
+= Table.AddColumn(#"Changed Type", "Quarter", each if [Month] = "January" or [Month] = "February" or [Month] = "March" then "Qtr 1" else "Other")
+
+कोड का इस्तेमाल सावधानी से करें.
+
+#### 🚀 How to Run the Project Locally
+
+To view and interact with this dashboard on your system, follow these steps: 
+
+1. **Clone the Repository:** 
+
+bash
+
+git clone https://github.com/your-username/ecommerce-sales-dashboard.git
+
+कोड का इस्तेमाल सावधानी से करें.
+2. **Prerequisites:** 
+
+  * Install [Microsoft Power BI Desktop](https://powerbi.microsoft.com/) (Free).
+3. **Open the Project:** 
+
+  * Navigate to the cloned folder.
+  * Double-click on the Ecommerce_Dashboard.pbix file to open it in Power BI.
+4. **Interact with Filters:** 
+
+  * Use the **Quarter Slicers** (Qtr 1, Qtr 2, etc.) at the top right to filter all visuals dynamically.
+
+#### 📸 Dashboard Preview
+
+ 
